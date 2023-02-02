@@ -3,8 +3,7 @@ import Button from 'components/Button/Button'
 
 const Home = () => (
   <div>
-    <p>Share your inspiration here</p>
-    <Button>Go</Button>
+    <Button>Example button</Button>
   </div>
 )
 

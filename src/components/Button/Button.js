@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Wrapper } from './Button.styles'
+import { Wrapper } from 'components/Button/Button.styles'
 
 const Button = ({ children }) => <Wrapper>{children}</Wrapper>
 
