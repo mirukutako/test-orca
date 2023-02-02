@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Wrapper } from 'components/Button/Button.styles'
+import { Wrapper } from 'components/UI/Button/Button.styles'
 
 const Button = ({ children }) => <Wrapper>{children}</Wrapper>
 
