@@ -4,12 +4,21 @@ import CopyButton from 'components/UI/CopyButton/CopyButton'
 import TextOverflow from 'components/UI/TextOverflow/TextOverflow'
 import Link from 'components/UI/Link/Link'
 import ScanLink from 'components/UI/ScanLink/ScanLink'
+import Button from 'components/UI/Button/Button'
+import { IcDownload, IcArrow } from 'components/UI/Icons/Icons'
 
 export const UIComponents = () => {
   return (
     <div>
       <div>
         <ul>
+          <li>
+            <Button>
+              <IcDownload />
+              Download as
+              <IcArrow />
+            </Button>
+          </li>
           <li>
             <Checkbox>Show additional items</Checkbox>
           </li>
