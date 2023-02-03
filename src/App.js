@@ -13,6 +13,9 @@ const GlobalyStyles = createGlobalStyle`
     --low-color: #F8CD39;
 
     color: var(--main-color);
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
   }
 `
 
