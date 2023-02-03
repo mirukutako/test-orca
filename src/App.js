@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import Home from 'modules/Home/Home'
+import { UIComponents } from 'modules/Home/UIComponents'
 
 const GlobalyStyles = createGlobalStyle`
   html {
@@ -22,7 +23,8 @@ const GlobalyStyles = createGlobalStyle`
 const App = () => (
   <>
     <GlobalyStyles />
-    Hello <Home />
+    <UIComponents />
+    <Home />
   </>
 )
 
