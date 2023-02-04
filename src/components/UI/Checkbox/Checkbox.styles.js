@@ -16,6 +16,7 @@ export const Wrapper = styled.label`
       display: block;
       width: 100%;
       height: 100%;
+      background-color: white;
       border: 1px solid var(--gray-color);
       border-radius: 2px;
       position: absolute;

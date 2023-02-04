@@ -8,4 +8,5 @@ export const Wrapper = styled.nav`
   padding: 1px;
   height: 30px;
   box-sizing: border-box;
+  background-color: white;
 `
