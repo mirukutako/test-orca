@@ -9,6 +9,7 @@ const GlobalyStyles = createGlobalStyle`
     --gray-color: #CACFDB;
     --caption-color: #70707B;
     --accent-color: #0080FF;
+    --accent-ligth-color: #E1EEFD;;
     --high-color: #E2005E;
     --medium-color: #FE7B1F;
     --low-color: #F8CD39;
