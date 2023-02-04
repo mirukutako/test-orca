@@ -7,6 +7,7 @@ import ScanLink from 'components/UI/ScanLink/ScanLink'
 import Button from 'components/UI/Button/Button'
 import { IcDownload, IcArrow, IcGroup } from 'components/UI/Icons/Icons'
 import Dropdown from 'components/UI/Dropdown/Dropdown'
+import ViewNav from 'components/UI/ViewNav/ViewNav'
 
 export const UIComponents = () => {
   return (
@@ -47,6 +48,9 @@ export const UIComponents = () => {
               <IcDownload />
               Download as
             </Dropdown>
+          </li>
+          <li>
+            <ViewNav />
           </li>
         </ul>
       </div>
