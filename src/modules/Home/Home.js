@@ -1,6 +1,10 @@
+import Container from 'components/Container/Container'
+import Header from 'components/Header/Header'
 const Home = () => (
   <div>
-    <h1>Add UI</h1>
+    <Container>
+      <Header />
+    </Container>
   </div>
 )
 
