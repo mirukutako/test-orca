@@ -25,15 +25,13 @@ export const UIComponents = () => {
             <Checkbox>Show additional items</Checkbox>
           </li>
           <li>
-            <IPAddress>
-              <TextOverflow>38.21.46.43/5</TextOverflow>
-              <CopyButton dataCopy="38.21.46.43/5" />
-            </IPAddress>
+            <TextOverflow>38.21.46.43/5</TextOverflow>
+            <CopyButton dataCopy="38.21.46.43/5" />
+            <IPAddress>38.21.46.43/5</IPAddress>
           </li>
           <li>
-            <ScanLink>
-              <Link>https://ow.ly/curae.aspx</Link>
-            </ScanLink>
+            <Link>https://ow.ly/curae.aspx</Link>
+            <ScanLink>https://ow.ly/curae.aspx</ScanLink>
           </li>
           <li>
             <Dropdown list={['Name', 'File name', 'IP Address v4', 'IP Address v6', 'Scan source']}>

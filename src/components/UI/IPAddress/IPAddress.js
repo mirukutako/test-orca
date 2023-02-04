@@ -1,5 +1,13 @@
 import { Wrapper } from './IPAddress.styles'
 
-const IPAddress = ({ children }) => <Wrapper>{children}</Wrapper>
+import TextOverflow from '../TextOverflow/TextOverflow'
+import CopyButton from '../CopyButton/CopyButton'
+
+const IPAddress = ({ children }) => (
+  <Wrapper>
+    <TextOverflow>{children}</TextOverflow>
+    <CopyButton dataCopy={children} />
+  </Wrapper>
+)
 
 export default IPAddress
