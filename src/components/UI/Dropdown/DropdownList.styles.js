@@ -8,6 +8,7 @@ export const Wrapper = styled.ul`
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   position: absolute;
+  z-index: 2;
   box-sizing: border-box;
   width: 100%;
   min-width: max-content;
