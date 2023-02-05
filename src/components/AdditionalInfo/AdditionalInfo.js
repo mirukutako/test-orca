@@ -6,7 +6,7 @@ const AdditionalInfo = ({ children, view, expand }) => {
       <div className="additional-info__title">
         <div className="caption">Additional info</div>
       </div>
-      <div className="additional-info__body">{children}</div>
+      {children}
     </Wrapper>
   )
 }

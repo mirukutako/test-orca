@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     &__title {
       position: sticky;
       top: 0px;
+      z-index: 5;
       padding-top: 32px;
       padding-bottom: 8px;
       background: white;
@@ -15,6 +16,14 @@ export const Wrapper = styled.div`
     &__body {
       white-space: normal;
       word-break: break-all;
+    }
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+      margin-bottom: 16px;
     }
   }
 
@@ -35,5 +44,8 @@ export const Wrapper = styled.div`
   }
   &[data-view='modal'] {
     padding: calc(var(--space) * 3);
+    .additional-info__title {
+      padding: 0 0 8px 0;
+    }
   }
 `
