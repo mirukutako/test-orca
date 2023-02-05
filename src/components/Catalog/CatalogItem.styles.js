@@ -8,6 +8,8 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   color: var(--main-color);
   transition: background-color 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  z-index: 1;
 
   .catalog-item {
     &__cell {
@@ -28,8 +30,28 @@ export const Wrapper = styled.div`
     align-items: center;
     padding: 11px;
     min-height: 60px;
-    &:not(:last-child) {
-      margin-bottom: var(--space);
+    position: relative;
+    z-index: 1;
+
+    &:not(:first-child) {
+      margin-top: var(--space);
+    }
+
+    &[data-expand='true'] {
+      &::before {
+        content: '';
+        display: block;
+        height: 12px;
+        box-sizing: border-box;
+        border-left: 1px solid var(--gray-color);
+        border-right: 1px solid var(--gray-color);
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        bottom: -2px;
+        z-index: -1;
+        pointer-events: none;
+      }
     }
 
     &:hover {
