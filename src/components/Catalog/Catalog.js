@@ -3,7 +3,7 @@ import { data } from '../../data/data'
 
 import CatalogItem from './CatalogItem'
 
-const Catalog = ({ viewActive }) => {
+const Catalog = ({ viewActive, handleModalVisible }) => {
   return (
     <Wrapper className="catalog-wrapper" data-view={viewActive}>
       <div className="catalog-header" data-view={viewActive}>
@@ -26,7 +26,14 @@ const Catalog = ({ viewActive }) => {
       </div>
       <div className="catalog" data-view={viewActive}>
         {data.map(item => {
-          return <CatalogItem key={item.id} item={item} viewActive={viewActive} />
+          return (
+            <CatalogItem
+              key={item.id}
+              item={item}
+              viewActive={viewActive}
+              handleModalVisible={handleModalVisible}
+            />
+          )
         })}
       </div>
     </Wrapper>

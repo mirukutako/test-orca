@@ -5,26 +5,34 @@ import { Wrapper } from './CatalogItem.styles'
 import IPAddress from 'components/UI/IPAddress/IPAddress'
 import ScanLink from 'components/UI/ScanLink/ScanLink'
 import TextOverflow from 'components/UI/TextOverflow/TextOverflow'
-// import { IcHigh, IcMedium, Iclow } from 'components/UI/Icons/Icons'
 import Button from 'components/UI/Button/Button'
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo'
+import StatusIcon from 'components/UI/Icons/StatusIcon'
+import Dropdown from 'components/UI/Dropdown/Dropdown'
+import { IcDownload } from 'components/UI/Icons/Icons'
 
-const CatalogItem = ({ item, viewActive }) => {
+const CatalogItem = ({ item, viewActive, handleModalVisible }) => {
   const [expand, setExpand] = useState(false)
-
   return (
     <>
       <Wrapper
         className="catalog-item"
         data-view={viewActive}
         onClick={() => {
-          setExpand(!expand)
+          if (viewActive === 'table') setExpand(!expand)
         }}
         data-expand={expand}
       >
         <div className="catalog-item__cell catalog-item__status">
           <span className="catalog-item__caption caption">Risk level:</span>
-          <span className="catalog-item__value">{item.status}</span>
+          <span className="catalog-item__value">
+            <div className="item-status">
+              <div className="item-status__icon" data-color={`${item.status}`.toLowerCase()}>
+                <StatusIcon status={item.status} />
+              </div>
+              <div className="item-status__name">{item.status}</div>
+            </div>
+          </span>
         </div>
         <div className="catalog-item__cell catalog-item__name">
           <span className="catalog-item__caption caption">Name:</span>
@@ -61,12 +69,24 @@ const CatalogItem = ({ item, viewActive }) => {
         <div className="catalog-item__cell catalog-item__additional">
           <span className="catalog-item__caption"></span>
           <span className="catalog-item__value">
-            <Button>Show additional info</Button>
+            <Button handleModalVisible={handleModalVisible} sendData={item}>
+              Show additional info
+            </Button>
           </span>
         </div>
       </Wrapper>
       <AdditionalInfo view={viewActive} expand={expand}>
-        {item.additional}
+        <div className="additional-info__body"> {item.additional}</div>
+        <div className="additional-info__footer">
+          <Button>Download</Button>
+          <Dropdown
+            type="button"
+            list={['Name', 'File name', 'IP Address v4', 'IP Address v6', 'Scan source']}
+          >
+            <IcDownload />
+            Download as
+          </Dropdown>
+        </div>
       </AdditionalInfo>
     </>
   )

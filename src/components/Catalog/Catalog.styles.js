@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
     &[data-view='card'] {
       display: flex;
       flex-flow: row wrap;
+      justify-content: center;
       gap: calc(var(--space) * 4);
     }
   }
