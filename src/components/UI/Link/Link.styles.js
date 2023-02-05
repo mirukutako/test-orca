@@ -11,4 +11,7 @@ export const Wrapper = styled.a`
     cursor: pointer;
     color: var(--accent-color);
   }
+  svg {
+    flex-shrink: 0;
+  }
 `
