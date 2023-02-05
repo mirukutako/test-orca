@@ -24,6 +24,11 @@ const GlobalyStyles = createGlobalStyle`
   body{
     background-color: var(--body-color);
   }
+
+  .caption{
+    color: var(--caption-color);
+    transition: color 0.2s ease;
+  }
 `
 
 const App = () => (
