@@ -5,7 +5,7 @@ import Checkbox from 'components/UI/Checkbox/Checkbox'
 import Dropdown from 'components/UI/Dropdown/Dropdown'
 import ViewNav from 'components/UI/ViewNav/ViewNav'
 
-const Header = () => {
+const Header = ({ viewNav, viewActive, viewHandleClick }) => {
   return (
     <Wrapper className="header">
       <a className="header__logo" href="/">
@@ -21,7 +21,7 @@ const Header = () => {
           <IcSort />
           Sort by
         </Dropdown>
-        <ViewNav />
+        <ViewNav items={viewNav} active={viewActive} handleClick={viewHandleClick} />
       </div>
     </Wrapper>
   )

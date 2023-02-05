@@ -5,15 +5,19 @@ import { Wrapper } from './ViewNav.styles'
 import ViewNavItem from './ViewNavItem'
 import { IcTable, IcCard } from '../Icons/Icons'
 
-const ViewNav = () => {
-  const [acitveItem, setActiveItem] = useState('table')
-  const items = [
+const ViewNav = ({
+  items = [
     { type: 'table', icon: <IcTable /> },
     { type: 'card', icon: <IcCard /> },
-  ]
+  ],
+  active = 'table',
+  handleClick,
+}) => {
+  const [acitveItem, setActiveItem] = useState(active)
 
   const changeActiveItem = type => {
     setActiveItem(type)
+    handleClick(type)
   }
   return (
     <Wrapper>
