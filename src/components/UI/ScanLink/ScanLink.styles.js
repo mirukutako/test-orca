@@ -5,9 +5,13 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: calc(var(--space) / 2);
   max-width: 100%;
-  & > svg {
-    flex-shrink: 0;
-    color: var(--gray-color);
+  .scan-link {
+    &__icon {
+      color: var(--gray-color);
+      flex-shrink: 0;
+      transition: color 0.2s ease;
+      font-size: 0;
+    }
   }
   a {
     width: 70%;

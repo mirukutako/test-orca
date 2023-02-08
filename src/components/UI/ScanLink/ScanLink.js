@@ -4,7 +4,9 @@ import Link from '../Link/Link'
 
 const ScanLink = ({ children }) => (
   <Wrapper className="scan-link">
-    <IcScan />
+    <i className="scan-link__icon">
+      <IcScan />
+    </i>
     <Link>{children}</Link>
   </Wrapper>
 )

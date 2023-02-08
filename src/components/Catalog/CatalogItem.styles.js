@@ -63,6 +63,10 @@ export const Wrapper = styled.div`
         color: white;
         transition: color 0.2s ease;
       }
+      .copy-bttn,
+      .scan-link__icon {
+        color: white;
+      }
 
       .item-status {
         &__icon {

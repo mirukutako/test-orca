@@ -10,8 +10,10 @@ export const Wrapper = styled.button`
   background: none;
   padding: 0;
   transition: color 0.2s ease;
+  flex-shrink: 0;
+
   &:hover {
     cursor: pointer;
-    color: var(--accent-color);
+    color: var(--accent-color) !important;
   }
 `
