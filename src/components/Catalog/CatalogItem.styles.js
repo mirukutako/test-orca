@@ -140,9 +140,12 @@ export const Wrapper = styled.div`
 
   &[data-view='card'] {
     width: calc(50% - 16px);
-    padding: calc(var(--space) * 3) calc(var(--space) * 4);
+    padding: calc(var(--space) * 3) calc(var(--space) * 4) calc(var(--space) * 6 + 30px)
+      calc(var(--space) * 4);
     display: grid;
+    align-items: flex-start;
     grid-template-columns: 38% 56%;
+    grid-auto-rows: max-content;
     column-gap: calc(var(--space) * 4);
     row-gap: calc(var(--space) * 2);
     min-width: 450px;
@@ -224,15 +227,23 @@ export const Wrapper = styled.div`
         }
       }
       &__source {
+        height: auto;
+        align-items: flex-start;
         @media (min-width: 601px) {
           grid-row-start: 3;
           grid-row-end: 4;
         }
       }
       &__additional {
+        height: auto;
+        padding-top: 8px;
         @media (min-width: 601px) {
           grid-row-start: 4;
           grid-row-end: 5;
+          position: absolute;
+          bottom: 24px;
+          right: 0;
+          width: 100%;
         }
         @media (max-width: 1100px) {
           .catalog-item__caption {
@@ -275,6 +286,18 @@ export const Wrapper = styled.div`
           width: 8px;
           height: 8px;
         }
+      }
+    }
+
+    .scan-link {
+      & > svg {
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+      .text-overflow {
+        overflow: visible;
+        white-space: normal;
+        word-break: break-all;
       }
     }
   }
