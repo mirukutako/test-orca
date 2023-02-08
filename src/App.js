@@ -13,6 +13,8 @@ const GlobalyStyles = createGlobalStyle`
     --medium-color: #FE7B1F;
     --low-color: #F8CD39;
     --body-color: #F3F4F9;
+    --scroll-bar-color: #F8F8F8;
+    --scroll-thumb-color: #B5B5BD;
 
     color: var(--main-color);
     font-family: 'Mulish', sans-serif;

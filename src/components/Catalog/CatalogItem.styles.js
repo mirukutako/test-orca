@@ -37,23 +37,6 @@ export const Wrapper = styled.div`
       margin-top: var(--space);
     }
 
-    &[data-expand='true'] {
-      &::before {
-        content: '';
-        display: block;
-        height: 12px;
-        box-sizing: border-box;
-        border-left: 1px solid var(--gray-color);
-        border-right: 1px solid var(--gray-color);
-        position: absolute;
-        left: -1px;
-        right: -1px;
-        bottom: -2px;
-        z-index: -1;
-        pointer-events: none;
-      }
-    }
-
     &:hover {
       cursor: pointer;
       background-color: var(--main-color);
