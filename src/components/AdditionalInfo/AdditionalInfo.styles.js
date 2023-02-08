@@ -32,6 +32,7 @@ export const Wrapper = styled.div`
     max-height: 200px;
     overflow-y: auto;
     border: 1px solid var(--gray-color);
+    border-radius: 0 0 4px 4px;
     border-top: none;
     display: none;
 
