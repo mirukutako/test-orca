@@ -23,7 +23,7 @@ export const Wrapper = styled.label`
       left: 0;
       top: 0;
       box-sizing: border-box;
-      transition: background-color 0.2s ease, border-color 0.2s;
+      transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
     &::after {
       content: '';
@@ -55,6 +55,12 @@ export const Wrapper = styled.label`
     input {
       &::before {
         --gray-color: var(--accent-color);
+      }
+
+      &:checked {
+        &::before {
+          box-shadow: 0px 0px 0px 2px var(--accent-ligth-color);
+        }
       }
     }
   }
