@@ -3,9 +3,10 @@ import { IcLink } from '../Icons/Icons'
 import TextOverflow from '../TextOverflow/TextOverflow'
 
 const Link = ({ children }) => (
-  <Wrapper href={children} title={children}>
-    <TextOverflow>{children}</TextOverflow>
-    <IcLink />
+  <Wrapper className="link" href={children} title={children}>
+    <TextOverflow>
+      {children} <IcLink />
+    </TextOverflow>
   </Wrapper>
 )
 
