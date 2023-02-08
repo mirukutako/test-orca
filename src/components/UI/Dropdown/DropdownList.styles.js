@@ -1,25 +1,54 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.ul`
   list-style: none;
-  padding: 4px 0;
   margin: 0;
   background: #ffffff;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   position: absolute;
-  z-index: 2;
+  z-index: 6;
   box-sizing: border-box;
   width: 100%;
   min-width: max-content;
   position: absolute;
-  right: 0;
-  top: 100%;
-  margin-top: 4px;
+  ${props => {
+    return props.dir === 'right' ? 'right: 0;' : 'left: 0;'
+  }}
+  ${props => {
+    switch (props.position) {
+      case 'top':
+        return css`
+          bottom: 100%;
+          margin-bottom: 4px;
+          transform: translateY(2px);
+        `
+      default:
+        return css`
+          top: 100%;
+          margin-top: 4px;
+          transform: translateY(-2px);
+        `
+    }
+  }}
+    ${props => {
+    switch (props.flow) {
+      case 'row':
+        return css`
+          display: flex;
+          flex-flow: row wrap;
+          padding: 4px;
+          box-shadow: 0px -2px 18px rgba(0, 0, 0, 0.1);
+        `
+      default:
+        return css`
+          padding: 4px 0;
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+        `
+    }
+  }}
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-2px);
   transition: opacity 0.2s ease, transform 0s 0.2s, visibility 0s 0.2s;
 
   li {

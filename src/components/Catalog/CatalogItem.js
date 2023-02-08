@@ -80,7 +80,12 @@ const CatalogItem = ({ item, viewActive, handleModalVisible }) => {
         <div className="additional-info__footer">
           <Button>Download</Button>
           <Dropdown
-            type="button"
+            options={{
+              type: 'button',
+              flow: 'row',
+              dir: 'right',
+              position: 'top',
+            }}
             list={['Name', 'File name', 'IP Address v4', 'IP Address v6', 'Scan source']}
           >
             <IcDownload />
