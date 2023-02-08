@@ -29,7 +29,7 @@ const Modal = ({ visible, data, handleModalVisible }) => {
         </div>
         <div className="modal__body">
           <AdditionalInfo view="modal" expand="true">
-            {data.additional}
+            <div className="additional-info__body"> {data.additional}</div>
           </AdditionalInfo>
         </div>
         <div className="modal__footer">
