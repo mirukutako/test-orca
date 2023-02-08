@@ -37,7 +37,7 @@ export const Wrapper = styled.ul`
           display: flex;
           flex-flow: row wrap;
           padding: 4px;
-          box-shadow: 0px -2px 18px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -2px 16px 2px rgba(0, 0, 0, 0.12);
         `
       default:
         return css`
