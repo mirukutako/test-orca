@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
     width: 100%;
     max-width: 900px;
     background-color: white;
+    border-radius: 4px;
     &__header {
       height: 80px;
       border-bottom: 1px solid var(--gray-color);
@@ -34,8 +35,9 @@ export const Wrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 25px;
-      height: 25px;
+      width: 24px;
+      height: 24px;
+      margin-right: -4px;
       appearance: none;
       padding: 0;
       border: none;

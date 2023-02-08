@@ -35,7 +35,9 @@ const Modal = ({ visible, data, handleModalVisible }) => {
         <div className="modal__footer">
           <Button>Download</Button>
           <Dropdown
-            type="button"
+            options={{
+              type: 'button',
+            }}
             list={['Name', 'File name', 'IP Address v4', 'IP Address v6', 'Scan source']}
           >
             <IcDownload />
