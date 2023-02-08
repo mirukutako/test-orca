@@ -3,7 +3,7 @@ import { IcScan } from '../Icons/Icons'
 import Link from '../Link/Link'
 
 const ScanLink = ({ children }) => (
-  <Wrapper>
+  <Wrapper className="scan-link">
     <IcScan />
     <Link>{children}</Link>
   </Wrapper>
