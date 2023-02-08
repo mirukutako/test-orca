@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
   display: inline-flex;
   align-items: center;
   padding: calc(var(--space) / 2) var(--space);
-  border: 1px solid var(--gray-color);
+  outline: 1px solid var(--gray-color);
+  outline-offset: -1px;
   border-radius: calc(var(--space) / 2);
   max-width: 100%;
   gap: var(--space);

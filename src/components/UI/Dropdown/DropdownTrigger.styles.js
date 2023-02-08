@@ -53,11 +53,12 @@ export const Wrapper = styled.div`
       default:
         return css`
           background-color: white;
-          border: 1px solid var(--gray-color);
-          transition: border-color 0.2s ease;
+          outline: 1px solid var(--gray-color);
+          outline-offset: -1px;
+          transition: outline-color 0.2s ease;
           &:hover,
           [data-open='true'] & {
-            border-color: var(--accent-color);
+            outline-color: var(--accent-color);
             cursor: pointer;
             svg {
               color: var(--accent-color);
